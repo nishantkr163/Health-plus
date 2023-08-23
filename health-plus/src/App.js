@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState, useEffect } from 'react';
+import AllRoutes from './Components/AllRoutes';
+import HeroSection from './Components/HeroSection'
+import Navbar from './Components/Navbar';
+import { useLocation } from 'react-router-dom'
+import AboutHeroSection from './Components/AboutHeroSection';
+import ProductsHeroSection from './Components/ProductsHeroSection';
+
 
 function App() {
+
+  const [section, setSection] = useState("/")
+
+  const location = useLocation();
+
+  useEffect(() => {
+    console.log(location.pathname)
+    setSection(location.pathname)
+  }, [location]);
+
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className={section === "/"  ? "HomeHeroSection" : section === '/about' ? 'AboutHeroSection' : section === '/products' ? "ProductHeroSection" : null}>
+      <Navbar />
+      {section === '/' ? <HeroSection /> : section === '/about' ? <AboutHeroSection /> : section === '/products' ? <ProductsHeroSection /> : null}
     </div>
+      <AllRoutes />
+    </>
   );
 }
 

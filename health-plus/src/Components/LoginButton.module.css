@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@100&display=swap');
+
+* {
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.button {
+    background-color: #DB2A24;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    width: 10%;
+}

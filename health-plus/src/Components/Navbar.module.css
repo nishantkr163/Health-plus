@@ -1,0 +1,61 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px;
+    align-items: center;
+}
+
+.navbarLink {
+    min-width: 350px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.routes {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.navbarData {
+    display: flex;
+    flex-direction: column;
+    color: grey;
+}
+
+.contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* border: 1px solid red; */
+    margin-bottom: 20px;
+    color: gray;
+    width: 600px;
+    /* border: 1px solid green; */
+}
+.contacts > div {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contacts span {
+    padding: 0 5px;
+}
+
+.socialIcon {
+    width: 20%;
+}
+
+.searchButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 50%;
+}
