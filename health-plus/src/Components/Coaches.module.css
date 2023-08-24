@@ -1,0 +1,28 @@
+.mainDiv {
+    text-align: center;
+}
+
+.cards {
+    padding: 5px;
+    width: 32%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.cards > img {
+    border-radius: 20px;
+}
+
+.cards > p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.coaches {
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    width: 80%;
+    margin: auto;
+}

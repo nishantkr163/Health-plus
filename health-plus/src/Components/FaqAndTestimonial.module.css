@@ -1,0 +1,12 @@
+.mainFaqDiv {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}       
+
+.accordion {
+    width: 50%;
+}
