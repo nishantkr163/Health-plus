@@ -5,7 +5,8 @@ import FaqAndTestimonial from "../Components/FaqAndTestimonial";
 import Schedules from "../Components/Schedules";
 import Program from "../Components/Program";
 import Coaches from "../Components/Coaches";
-import { Element } from 'react-scroll';
+import Bmi from "../Components/Bmi";
+import Footer from "../Components/Footer";
 export const Home = () => {
   return (
     <>
@@ -57,17 +58,19 @@ export const Home = () => {
       <br />
       <br />
       <br />
-      <Element name="classes">
-        <Schedules />
-      </Element>
+      <Schedules />
       <br />
       <Program />
+      <Bmi />
       <br />
       <br />
       <Coaches />
       <br />
       <br />
       <FaqAndTestimonial />
+      <br />
+      <br />
+      <Footer />
     </>
   );
 };

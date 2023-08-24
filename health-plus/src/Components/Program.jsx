@@ -4,7 +4,7 @@ import { Typography} from "@mui/material";
 
 const Program = () => {
   return (
-    <div style={{ textAlign : 'center' }}>
+    <div className={style.mainDiv} style={{ textAlign : 'center' }}>
     <Typography m='auto'
         fontWeight="bold"
         className={style.class}
