@@ -1,0 +1,24 @@
+.mainDiv {
+    height: 200px;
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("https://images.unsplash.com/photo-1593079831268-3381b0db4a77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.CommonButton {
+    height: 56px;
+    outline: none;
+    border: 0;
+    background-color: #DB2A24;
+    font-family: "Oswald";
+    padding: 0 30px;
+    font-size: 20px;
+    border-radius: 3px;
+}

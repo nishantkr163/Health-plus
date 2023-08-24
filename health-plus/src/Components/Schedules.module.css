@@ -1,0 +1,53 @@
+/* Schedule CSS */
+
+.class {
+    text-align: center;
+    /* font-family: 'Oswald', sans-serif; */
+    padding: 20px 0;
+}
+
+.schedule {
+    margin: 10px;
+    /* border: 1px solid red; */
+    height: auto;
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.days, .ten, .twelve, .five, .seven, .eight {
+    /* border: 1px solid black; */
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.days > div , .eight > div , .ten > div , .twelve > div , .five > div , .seven > div  {
+    /* border : 1px solid black; */
+    width: 12%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.days > div {
+    background-color: #141B23;
+    color : white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time {
+    background-color: #DB2A24;
+    color: white;
+}
+
+.activites {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}

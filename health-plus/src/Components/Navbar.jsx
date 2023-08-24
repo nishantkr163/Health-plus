@@ -14,7 +14,7 @@ import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 const Navbar = () => {
   return (
       <div className={styles.navbar}>
-        <img width={"150px"} src={logo} alt="" />
+        <img style={{ padding : '10px' }} width={"150px"} src={logo} alt="" />
         <div className={styles.navbarData}>
             <div>
                 <div className={styles.contacts}>
