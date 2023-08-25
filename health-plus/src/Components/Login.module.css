@@ -1,0 +1,32 @@
+.mainDiv {
+    border: 1px solid red;
+    padding: 10px;
+    height: 500px;
+    position: relative;
+    width: 70%;
+    /* margin: auto; */
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(10px);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.mainDiv > div {
+    border: 1px solid green;
+    height: 95%;
+    width: 47%;
+}
+
+.loginDivOne {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+

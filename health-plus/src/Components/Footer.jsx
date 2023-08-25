@@ -13,6 +13,8 @@ import InfoIcon from '@mui/icons-material/Info';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import HandshakeIcon from '@mui/icons-material/Handshake';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
+import SendIcon from '@mui/icons-material/Send';
+
 
 const Footer = () => {
   return (
@@ -83,8 +85,8 @@ const Footer = () => {
           Unlock a healthier you. <span style={{color : "#DB2A24"}} >Subscribe to our newsletter</span> to receive health and fitness tips, motivational stories, and exclusive offers tailored just for you. <FormatQuoteIcon />
         </Typography>
         <div className={style.input}>
-          <input type="email" placeholder="Enter you Email ID" />
-          <button>Submit</button>
+          <input className={style.inputField} type="email" placeholder="youremailID@gmail.com" />
+          <div className={style.button}> <SendIcon className={style.sendButton} /> </div>
         </div>
       </div>
     </div>

@@ -3,8 +3,10 @@ import style from './Loading.module.css'
 
 const Loading = () => {
   return (
-    <div className={style.cardContainer}>
-        <div className={style.customLoader}>
+    <div style={{
+      padding : "90px"
+    }} >
+        <div className="customLoader">
             
         </div>
   </div>

@@ -64,6 +64,15 @@ export const Home = () => {
       <Bmi />
       <br />
       <br />
+      <Typography
+        className='professional'
+        fontWeight="bold"
+        fontFamily="Oswald"
+        color="#DB2A24"
+        variant="h3"
+      >
+        MEET OUR PROFESSIONAL COACHES
+      </Typography>
       <Coaches />
       <br />
       <br />
