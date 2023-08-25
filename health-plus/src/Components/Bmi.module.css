@@ -10,6 +10,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
+    color: #DB2A24;
 }
 
 .CommonButton {
@@ -21,4 +23,16 @@
     padding: 0 30px;
     font-size: 20px;
     border-radius: 3px;
+    color: white;
+}
+
+.mainDiv label {
+    font-weight: bold;
+    color: #DB2A24;
+}
+
+.inputField {
+    color: #DB2A24;
+    font-weight: bold;
+    font-family: "Oswald";
 }

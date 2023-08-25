@@ -1,6 +1,5 @@
 import style from "./Coaches.module.css";
 import { useState, useEffect } from "react";
-import { Typography } from "@mui/material";
 import axios from "axios";
 import React from "react";
 import DoneAllIcon from "@mui/icons-material/DoneAll";
@@ -15,7 +14,7 @@ const Coaches = () => {
 
   useEffect(() => {
     setLoading(true)
-    axios.get(`https://healthfitness.onrender.com/coaches`).then((res) => {
+    axios.get(`https://healthfitness.onrender.com/coaches?_limit=3`).then((res) => {
       console.log(res.data);
       setData(res.data);
       setLoading(false)
@@ -28,15 +27,6 @@ const Coaches = () => {
 
   return (
     <div className={style.mainDiv}>
-      <Typography
-        margin="auto"
-        fontWeight="bold"
-        fontFamily="Oswald"
-        color="#DB2A24"
-        variant="h3"
-      >
-        MEET OUR PROFESSIONAL COACHES
-      </Typography>
       <br />
       <br />
       <div className={style.coaches}>

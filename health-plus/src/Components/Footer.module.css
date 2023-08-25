@@ -13,7 +13,7 @@
 }
 
 .mainDiv > div {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 350px;
 }
 
@@ -54,3 +54,50 @@
 .class3::first-letter {
     font-size: 80px;
 }
+
+.input {
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.inputField {
+    height: 30px;
+    width: 40%;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #DB2A24;
+}
+
+.inputField {
+    color: grey;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.inputField::-webkit-input-placeholder {
+    text-align: center;
+}
+
+.inputField:focus {
+    border-color:#DB2A24;
+}
+
+.button {
+    background-color: #DB2A24;
+    width: 10%;
+    border: 0;
+    outline: none;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    border-radius: 3px;
+    
+}
+
+.button:hover {
+    transform: translate(-2px, 2px);
+}
+

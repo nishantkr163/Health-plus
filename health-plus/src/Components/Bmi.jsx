@@ -31,7 +31,7 @@ const Bmi = () => {
             KNOW YOUR BMI
           </Typography>
         </div>
-        <div>
+        <div style={{ display : 'flex', gap : '40px' }}>
           <FormControl sx={{ minWidth: 120 }} error>
             <InputLabel id="demo-simple-select-error-label">Age</InputLabel>
             <Select
@@ -50,28 +50,42 @@ const Bmi = () => {
           </FormControl>
           <TextField
             sx={{
-              backgroundColor: "black",
-              color: "#DB2A24",
-              fontWeight: "bold",
+              "& input": {
+                backgroundColor: "black",
+                color: "#DB2A24",
+                fontWeight: "bold", 
+              },
             }}
+            type="number"
             error
             id="outlined-error"
             label="Your Weight(in kg)"
             defaultValue=""
+            className={style.inputField}
           />
           <TextField
             sx={{
-              backgroundColor: "black",
-              color: "#DB2A24",
-              fontWeight: "bold",
+              "& input": {
+                backgroundColor: "black",
+                color: "#DB2A24",
+                fontWeight: "bold",
+              },
             }}
+            type="number"
             error
             id="outlined-error"
             label="Your Height(in cm)"
             defaultValue=""
+            className={style.inputField}
+            InputProps={{
+              style: {
+                backgroundColor: 'black',  // Background color of the input
+                '-moz-appearance': 'textfield',
+                appearance: 'textfield',
+              },
+            }}
           />
-          
-            <Typography
+          <Typography
               fontWeight="bold"
               className={style.class}
               fontFamily="Oswald"
@@ -82,6 +96,7 @@ const Bmi = () => {
               = {bmi}
             </Typography>
             <button className={style.CommonButton}>Calculate</button>
+            
         </div>
       </div>
     </div>

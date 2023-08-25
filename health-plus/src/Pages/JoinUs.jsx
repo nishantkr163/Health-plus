@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Footer from '../Components/Footer'
 const JoinUs = () => {
   return (
-    <div>JoinUs</div>
+    <>
+     <Footer />
+    </>
   )
 }
 

@@ -6,6 +6,8 @@ import Navbar from './Components/Navbar';
 import { useLocation } from 'react-router-dom'
 import AboutHeroSection from './Components/AboutHeroSection';
 import ProductsHeroSection from './Components/ProductsHeroSection';
+import JoinUs from './Pages/JoinUs';
+import Login from './Components/SignUp';
 
 
 function App() {
@@ -23,9 +25,9 @@ function App() {
 
   return (
     <>
-    <div className={section === "/"  ? "HomeHeroSection" : section === '/about' ? 'AboutHeroSection' : section === '/products' ? "ProductHeroSection" : null}>
+    <div className={section === "/"  ? "HomeHeroSection" : section === '/about' ? 'AboutHeroSection' : section === '/products' ? "ProductHeroSection" : section === '/signup' ? 'LoginHeroSection' : null}>
       <Navbar />
-      {section === '/' ? <HeroSection /> : section === '/about' ? <AboutHeroSection /> : section === '/products' ? <ProductsHeroSection /> : null}
+      {section === '/' ? <HeroSection /> : section === '/about' ? <AboutHeroSection /> : section === '/products' ? <ProductsHeroSection /> : section === '/signup' ? <Login /> : null}
     </div>
       <AllRoutes />
     </>
