@@ -3,14 +3,14 @@ import React, { useState, createContext } from "react";
 export const LabelContext = createContext();
 
 const initData = {
-    name: "",
-    email: "",
-    password: "",
+    name: "testUser1",
+    email: "test1@gmail.com",
+    password: "1234",
     gender : "",
-    age : "",
+    age : "22",
     dateOfBirth: "",
-    height : "",
-    weight : "",
+    height : "168",
+    weight : "66",
     fitness : []
 }
 
@@ -19,6 +19,11 @@ export const LabelProvider = (props) => {
   const [page, setPage] = useState(0);
   const [userData, setUserData] = useState(initData);
   const [isAuth, setIsAuth] = useState(false) 
+  const [logged, setLogged] = useState(false)
+
+  const handleLogged = () => {
+    setLogged(!logged)
+  }
 
   const handleAuth = () => {
     setIsAuth(!isAuth)
@@ -53,6 +58,10 @@ export const LabelProvider = (props) => {
   })
   }
 
+  const handlePageReset = () => {
+    setPage(0);
+  }
+
   const handleFitness = (val) => {
     setUserData({
       ...userData,
@@ -80,7 +89,10 @@ export const LabelProvider = (props) => {
         handleFitness,
         handleAuth,
         isAuth,
-        handleReset
+        handleReset,
+        handlePageReset,
+        handleLogged,
+        logged
       }}
     >
       {props.children}

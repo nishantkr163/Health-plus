@@ -11,32 +11,52 @@ import {
   Typography,
 } from "@mui/material";
 import { Select, Autocomplete } from "@mui/material";
-import axios from 'axios'
+import axios from "axios";
 import Loading from "./Loading";
 import Login from "./Login";
+import ErrorModal from "./ErrorModal";
+
 
 const SignUp = (props) => {
   const value = useContext(LabelContext);
-  console.log(value)
+  console.log(value);
+  const [show, setShow]  = useState(false);
+
+  function handleToggle() {
+    setShow(!show)
+  }
+
   return (
     <>
-    { value.isAuth ? <Login /> :
-    <div className={style.mainDiv}>
-      {value.page !== 5 && (
-        <Stepper steps={value.steps} activeStep={value.page} />
+      {
+        show ? <ErrorModal handleToggle={handleToggle} /> : null
+      }
+      {value.isAuth ? (
+        <Login />
+      ) : (
+        <div className={style.mainDiv}>
+          {value.page !== 5 && (
+            <Stepper steps={value.steps} activeStep={value.page} />
+          )}
+          {value.page === 0 && <UserDetail1 />}
+          {value.page === 1 && <UserDetail2 />}
+          {value.page === 2 && <UserDetail3 />}
+          {value.page === 3 && <UserDetail4 />}
+          {value.page === 4 && <PostData handleToggle={handleToggle}  />}
+        </div>
       )}
-      {value.page === 0 && <UserDetail1 />}
-      {value.page === 1 && <UserDetail2 />}
-      {value.page === 2 && <UserDetail3 />}
-      {value.page === 3 && <UserDetail4 />}
-      {value.page === 4 && <PostData />}
-    </div>
-}
-    <div style={{margin : "10px", textAlign : 'center'}}>
-    <button className="authToggleButton" onClick={() => {
-      value.handleAuth()
-    }} >{value.isAuth ? "LOGOUT & CREATE NEW ACCOUNT" : "ALREADY HAVE AN ACCOUNT? LOGIN NOW"}</button>
-    </div>
+      <div style={{ margin: "10px", textAlign: "center" }}>
+        <button
+          className="authToggleButton"
+          onClick={() => {
+            value.handleAuth();
+          }}
+        >
+          {value.isAuth
+            ? "LOGOUT & CREATE NEW ACCOUNT"
+            : "ALREADY HAVE AN ACCOUNT? LOGIN NOW"}
+        </button>
+      </div>
     </>
   );
 };
@@ -463,130 +483,166 @@ const UserDetail3 = (props) => {
 };
 
 const UserDetail4 = (props) => {
-    const value = useContext(LabelContext);
-    console.log("value", value);
-    const [selectedOptions, setSelectedOptions] = useState([]);
-    const options = [
-      "Weight loss",
-      "Flexibility",
-      "Strength training",
-      "Muscle gain",
-      "Cardiovascular fitness improvement",
-      "Cardio",
-    ];
-  
-    const handleOptionsChange = (event, newValue) => {
-      setSelectedOptions(newValue);
-    };
-  
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      // Handle the selected options as needed, e.g., submit to API or store in state
-      console.log("Selected options:", selectedOptions);
-      value.handleFitness(selectedOptions); // Assuming you have a function in LabelContext to handle fitness data
-      value.nextPage(); // Proceed to the next page
-    };
-  
-    return (
-      <>
-        <form onSubmit={handleSubmit}>
-        <Autocomplete
-        multiple
-        id="multi-select"
-        options={options}
-        onChange={handleOptionsChange}
-        value={selectedOptions}
-        renderInput={(params) => <TextField {...params} label="Select Options" />}
-      />
-          <ButtonGroup
-            variant="contained"
-            color="error"
-            aria-label="text primary button group"
-          >
-            <Button
-              onClick={() => value.prevPage()}
-              style={{
-                margin: "auto",
-                border: "1px solid white",
-                color: "white",
-              }}
-            >
-              Previous
-            </Button>
-            <Button
-              type="submit"
-              style={{
-                margin: "auto",
-                border: "1px solid white",
-                color: "white",
-              }}
-            >
-              Next
-            </Button>
-          </ButtonGroup>
-        </form>
-      </>
-    );
+  const value = useContext(LabelContext);
+  console.log("value", value);
+  const [selectedOptions, setSelectedOptions] = useState([]);
+  const options = [
+    "Weight loss",
+    "Flexibility",
+    "Strength training",
+    "Muscle gain",
+    "Cardiovascular fitness improvement",
+    "Cardio",
+  ];
+
+  const handleOptionsChange = (event, newValue) => {
+    setSelectedOptions(newValue);
   };
 
-const PostData = (props) => {
-    const [loading, setLoading] = useState(false)
-    const [error, setError] = useState(false)
-    const { userData, handleReset, handleAuth } = useContext(LabelContext);
-    let postData = {
-        "name" : userData.name,
-        "email" : userData.email,
-        "password" : userData.password,
-        "gender" : userData.gender,
-        "height" : userData.height,
-        "dateOfBirth" : userData.dateOfBirth,
-        "age" : userData.age,
-        "weight" : userData.weight,
-        "fitness" : userData.fitness
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle the selected options as needed, e.g., submit to API or store in state
+    console.log("Selected options:", selectedOptions);
+    value.handleFitness(selectedOptions); // Assuming you have a function in LabelContext to handle fitness data
+    value.nextPage(); // Proceed to the next page
+  };
 
-    function postingFunction() {
-      if(userData.name === "" || userData.email === "" || userData.password === "") {
-        return;
+  return (
+    <>
+      <form onSubmit={handleSubmit}>
+        <Autocomplete
+          multiple
+          id="multi-select"
+          options={options}
+          onChange={handleOptionsChange}
+          value={selectedOptions}
+          renderInput={(params) => (
+            <TextField {...params} label="Select Options" />
+          )}
+        />
+        <ButtonGroup
+          variant="contained"
+          color="error"
+          aria-label="text primary button group"
+        >
+          <Button
+            onClick={() => value.prevPage()}
+            style={{
+              margin: "auto",
+              border: "1px solid white",
+              color: "white",
+            }}
+          >
+            Previous
+          </Button>
+          <Button
+            type="submit"
+            style={{
+              margin: "auto",
+              border: "1px solid white",
+              color: "white",
+            }}
+          >
+            Next
+          </Button>
+        </ButtonGroup>
+      </form>
+    </>
+  );
+};
+
+
+const PostData = ({handleToggle}) => {
+  console.log( "props" ,handleToggle)
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+  const { userData, handleReset, handleAuth, handlePageReset } = useContext(LabelContext);
+  let postData = {
+    name: userData.name,
+    email: userData.email,
+    password: userData.password,
+    gender: userData.gender,
+    height: userData.height,
+    dateOfBirth: userData.dateOfBirth,
+    age: userData.age,
+    weight: userData.weight,
+    fitness: userData.fitness,
+  };
+
+
+  function postingData() {
+    if (
+      userData.name === "" ||
+      userData.email === "" ||
+      userData.password === ""
+    ) {
+      return;
+    }
+    axios
+      .post(`https://healthfitness.onrender.com/clients`, postData)
+      .then((res) => {
+        setLoading(false);
+        setTimeout(() => {
+          handleAuth()
+          handleReset()
+        }, 3000)
+        console.log("success", res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+        setError(true);
+      });
+  }
+
+  function checkEmail(mailId) {
+    axios.get(`https://healthfitness.onrender.com/clients?email_like=${mailId}`).then((res) => {
+      console.log(res.data)
+      // setCheck(res.data)
+      console.log(res.data.length)
+      if(res.data.length !== 0 ) {
+        handlePageReset();
+        handleToggle()
+      } else {
+        postingData();
       }
-      axios.post(`https://healthfitness.onrender.com/clients`, postData).then((res) => {
-            setLoading(false)
-            console.log("success", res.data)
-            handleAuth()
-        }).catch((err) => {
-            console.log(err)
-            setError(true)
-        })
-    }
+    })
+    
+  }
 
-    useEffect(() => {
-        setLoading(true)
-        postingFunction()
-        handleReset()
-    }, [])
+  useEffect(() => {
+    setLoading(true);
+    checkEmail(userData.email)
+  }, []);
 
-    console.log(userData)
+  console.log(userData);
 
-    if(loading) {
-        return <Loading />
-    }
+  if (loading) {
+    return <Loading />;
+  }
 
-    if(error) {
-        return <h1>Something went wrong...</h1>
-    }
+  if (error) {
+    return <h1>Something went wrong...</h1>;
+  }
 
-    return (
-        <div style={ {
-            display : 'flex',
-            justifyContent : 'center',
-            alignItem : "center"
-        } } > 
-            <lord-icon
-    src="https://cdn.lordicon.com/wibomifa.json"
-    trigger="loop"
-    colors="primary:#ffffff,secondary:#db2a24"
-    style={{ width: '250px', height: '250px' }}>
-</lord-icon>
-        </div>
-    )
-}
+  return (
+    <>
+    <div
+      style={{
+        display: "flex",
+        flexDirection : 'column',
+        justifyContent: "center",
+        alignItem: "center",
+        textAlign : 'center'
+      }}
+    >
+      <lord-icon
+        src="https://cdn.lordicon.com/wibomifa.json"
+        trigger="loop"
+        colors="primary:#ffffff,secondary:#db2a24"
+        style={{ width: "250px", height: "250px", margin: "auto" }}
+      ></lord-icon>
+      <Typography variant='h6'>Redirecting you to Signup page...</Typography>
+    </div>
+    </>
+  );
+};

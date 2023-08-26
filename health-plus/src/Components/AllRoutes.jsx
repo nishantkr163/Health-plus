@@ -4,6 +4,7 @@ import { Home } from '../Pages/Home'
 import { Products } from '../Pages/Products'
 import JoinUs from '../Pages/JoinUs'
 import About from '../Pages/About'
+import MyProfile from './MyProfile'
 
 const AllRoutes = () => {
   return (
@@ -13,6 +14,7 @@ const AllRoutes = () => {
             <Route path='/about' element={<About />} />
             <Route path='/products' element={<Products />} />
             <Route path='/signup' element={<JoinUs />} />
+            <Route path='/profile' element={<MyProfile />} />
         </Routes>
     </>
   )
