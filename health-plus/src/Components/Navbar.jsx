@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Navbar.module.css'
 import logo from '../Images/Logo.png'
@@ -9,9 +9,14 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import { IconButton } from '@mui/material'
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
+import { LabelContext } from '../labelDataContext'
+import MyProfile from './MyProfile'
 
 
 const Navbar = () => {
+
+    const value = useContext(LabelContext)
+    console.log(value)
   return (
       <div className={styles.navbar}>
         <img style={{ padding : '10px' }} width={"150px"} src={logo} alt="" />
@@ -29,7 +34,9 @@ const Navbar = () => {
                 <Link className={styles.routes} to="/">HOME</Link>
                 <Link className={styles.routes} to='/about'>ABOUT</Link>
                 <Link className={styles.routes} to="/products">PRODUCT</Link>
-                <Link className={styles.routes} to="/signup">JOIN US</Link>
+                {
+                    value.logged ? <Link className={styles.routes} to="/profile">MY PROFILE</Link> : <Link className={styles.routes} to="/signup">JOIN US</Link>
+                }
                 <IconButton>
                     <div className={styles.searchButton}>
                         <SearchRoundedIcon sx={{color : 'white'}} />
