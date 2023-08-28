@@ -7,7 +7,9 @@
   top: 33%;
   left: 50%;
   transform: translate(-50%, -50%);
-  backdrop-filter: blur(10px);
+  opacity: 0.8;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(99,99,99,1) 14%, rgba(0,0,0,1) 33%);
   color: white;
   border-radius: 10px;
 }
@@ -17,4 +19,19 @@ form {
   flex-direction: column;
   gap: 20px;
   margin-top: 20px;
+}
+
+.buttonGroup {
+  position: relative;
+  top: 90%;
+  left: 47%;
+  transition: transformX(-50%);
+  width: 40%;
+  
+}
+
+@media (min-width: 410px) and (max-width: 420px)  {
+  .mainDiv {
+    width: 100%;
+  }
 }

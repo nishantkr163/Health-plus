@@ -4,6 +4,7 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("https://images.unsplash.com/photo-1475332363216-323c9b7f1e81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1033&q=80");
     background-size: cover;
     background-position: center;
+    padding: 20px;
 }
 
 .mainDiv {
@@ -101,3 +102,20 @@
     transform: translate(-2px, 2px);
 }
 
+@media (min-width: 410px) and (max-width: 420px)  {
+    .mainDiv {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .mainDiv > div {
+        width: 90%;
+        margin: auto;
+    }
+    .footerThree {
+        display: none;
+    }
+    .activeLink {
+        display: none;
+    }
+}

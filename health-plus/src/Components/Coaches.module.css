@@ -28,3 +28,18 @@
     width: 80%;
     margin: auto;
 }
+
+@media (min-width: 410px) and (max-width: 420px)  {
+    .cards {
+        padding: 10px;
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 10px;
+    
+    }
+    .coaches {
+        display: flex;
+        width: 90%;
+        flex-direction: column;
+    }
+}

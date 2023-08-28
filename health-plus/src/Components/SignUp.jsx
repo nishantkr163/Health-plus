@@ -69,7 +69,7 @@ const UserDetail1 = (props) => {
 
   return (
     <>
-      <form
+      <form 
         onSubmit={(e) => {
           e.preventDefault();
           console.log(value.userData);
@@ -190,6 +190,7 @@ const UserDetail1 = (props) => {
             },
           }}
         />
+        <div className={style.buttonGroup}>
         <ButtonGroup
           variant="contained"
           color="error"
@@ -207,6 +208,7 @@ const UserDetail1 = (props) => {
             Next
           </Button>
         </ButtonGroup>
+        </div>
       </form>
     </>
   );
@@ -345,6 +347,7 @@ const UserDetail2 = (props) => {
             />
           </FormControl>
         </div>
+        <div className={style.buttonGroup}>
         <ButtonGroup
           variant="contained"
           color="error"
@@ -356,6 +359,7 @@ const UserDetail2 = (props) => {
               margin: "auto",
               border: "1px solid white",
               color: "white",
+              marginRight : "40px"
             }}
           >
             Previous
@@ -372,6 +376,7 @@ const UserDetail2 = (props) => {
             Next
           </Button>
         </ButtonGroup>
+        </div>
       </form>
     </>
   );
@@ -450,7 +455,9 @@ const UserDetail3 = (props) => {
             },
           }}
         />
+        {/* <div> */}
         <ButtonGroup
+        sx={{ marginTop : "160px" }}
           variant="contained"
           color="error"
           aria-label="text primary button group"
@@ -477,6 +484,7 @@ const UserDetail3 = (props) => {
             Next
           </Button>
         </ButtonGroup>
+        {/* </div> */}
       </form>
     </>
   );
@@ -511,16 +519,22 @@ const UserDetail4 = (props) => {
     <>
       <form onSubmit={handleSubmit}>
         <Autocomplete
+        sx={{ widht : '60%' }}
           multiple
           id="multi-select"
           options={options}
           onChange={handleOptionsChange}
           value={selectedOptions}
           renderInput={(params) => (
-            <TextField {...params} label="Select Options" />
+            <TextField
+      {...params}
+      label="Select Options"
+      sx={{ backgroundColor: "white" }} // Add the background color here
+    />
           )}
         />
         <ButtonGroup
+        sx={{ marginTop : "240px" }}
           variant="contained"
           color="error"
           aria-label="text primary button group"
@@ -550,7 +564,6 @@ const UserDetail4 = (props) => {
     </>
   );
 };
-
 
 const PostData = ({handleToggle}) => {
   console.log( "props" ,handleToggle)

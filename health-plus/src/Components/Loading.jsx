@@ -6,9 +6,19 @@ const Loading = () => {
     <div style={{
       padding : "90px"
     }} >
-        <div className="customLoader">
-            
+        <div className="spinner-container">
+  <div className="spinner">
+   <div className="spinner">
+    <div className="spinner">
+      <div className="spinner">
+        <div className="spinner">
+            <div className="spinner"></div>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
   </div>
   )
 }

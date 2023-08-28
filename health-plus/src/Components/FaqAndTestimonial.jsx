@@ -109,9 +109,7 @@ const FaqAndTestimonial = () => {
   return (
     <div className={style.mainFaqDiv}>
       <div
-        style={{
-          width: "45%",
-        }}
+        className={style.faqSec}
       >
         <Typography mb="20px"
           textAlign="center"

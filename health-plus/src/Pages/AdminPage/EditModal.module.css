@@ -1,0 +1,26 @@
+.mainDiv {
+    border: 1px solid black;
+    border-radius: 4px;
+    height: 90vh;
+    width: 50vw;
+    background-color: bisque;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    z-index : 2;
+    padding: 0 20px 40px 20px;
+    animation: openedit 0.8s;
+}
+
+@keyframes openedit {
+    0% {
+        transform: translate(-50%, -50%) scale(0.1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.3);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}

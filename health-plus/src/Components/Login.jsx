@@ -5,8 +5,7 @@ import applogo from "../Images/applogo.png";
 import { TextField, Typography } from "@mui/material";
 import axios from "axios";
 import { LabelContext } from "../labelDataContext";
-import { Navigate, useNavigate } from "react-router-dom";
-import WrongPassword from "./WrongPassword";
+import { useNavigate } from "react-router-dom";
 import Loading from "./Loading";
 
 const Login = () => {
@@ -34,13 +33,18 @@ const Login = () => {
 
   function checkAvaibality() {
     setLoading(true);
+    if(email === "admin@gmail.com" && password === "admin") {
+      nav('/admin')
+      return;
+    }
     axios
       .get(`https://healthfitness.onrender.com/clients?email_like=${email}`)
       .then((res) => {
         if (res.data.length === 1) {
           console.log("account available");
           if (res.data[0].password === password) {
-            console.log("able to login");
+            console.log("able to login", res.data);
+            localStorage.setItem("myAcc", JSON.stringify(res.data));
             setPassCheck(false);
             succesLogin();
           } else {

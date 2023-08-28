@@ -1,0 +1,67 @@
+.mainDiv {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),  url("https://plus.unsplash.com/premium_photo-1670505062582-fdaa83c23c9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+    position: relative;
+    top: -130px;
+    z-index: -1;
+}
+
+.mainProd > div {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2.5px, rgb(51, 51, 51) 0px 0px 0px 3px;
+    width: 45%;
+    border-radius: 5px;
+    height: 650px;
+    padding: 40px;
+}
+
+.mainProd {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 40px;
+    position : relative;
+    top : -100px;
+}
+
+.mainProd img {
+    width: 100%;
+}
+
+button {
+    font-size: 1rem;
+    color: color;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    background: white;
+    box-shadow: 3px 3px #fafafa;
+    cursor: pointer;
+}
+  
+button:active {
+    box-shadow: none;
+    transform: translate(3px, 3px);
+}
+
+.prodReviewDiv {
+    position: relative;
+    top: -60px;
+}
+
+.prodReview {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2.5px, rgb(51, 51, 51) 0px 0px 0px 3px;
+    padding: 30px;
+    width: 89%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.prodReview > div > div {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2.5px, rgb(51, 51, 51) 0px 0px 0px 3px;
+    padding: 20px;
+    border-radius: 4px;
+}
