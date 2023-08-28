@@ -45,7 +45,7 @@ const Coaches = () => {
                 Expertise:- <FitnessCenterIcon />{" "}
               </h3>
               {ele.expertise.map((e, i) => (
-                <p key={ele.name + ele.id}>{`${i + 1} ${e}`}</p>
+                <p key={ele.name + ele.id + Date.now()}>{`${i + 1} ${e}`}</p>
               ))}
               <p style={{ color : '#DB2A24' }} > <PhoneIcon /> Contact: {ele.contact.phone}</p>
               <p style={{ color : '#DB2A24' }} > <EmailIcon /> Email: {ele.contact.email}</p>

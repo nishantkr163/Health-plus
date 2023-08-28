@@ -4,8 +4,8 @@ import { Typography } from "@mui/material";
 const ProductsHeroSection = () => {
   return (
     <div className="heroSectionTexts">
-      <Typography fontFamily='Oswald' fontWeight='bold' className='heroSectionTitle' variant='h3'>ELEVATE YOUR WELLNESS JOURNEY. START YOUR PATH TO FITNESS.</Typography>
-        <Typography fontFamily='Oswald' fontWeight='bold' className='subTitle' variant='h4'>Join Our Fitness Community and Start Your Transformation Today!</Typography>
+      {/* <Typography fontFamily='Oswald' fontWeight='bold' className='heroSectionTitle' variant='h3'>ELEVATE YOUR WELLNESS JOURNEY. START YOUR PATH TO FITNESS.</Typography>
+        <Typography fontFamily='Oswald' fontWeight='bold' className='subTitle' variant='h4'>Join Our Fitness Community and Start Your Transformation Today!</Typography> */}
     </div>
   );
 };

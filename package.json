@@ -4,6 +4,8 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.3",
     "@mui/material": "^5.14.5",
+    "chart.js": "^4.4.0",
+    "react-chartjs-2": "^5.2.0",
     "react-scripts": "^5.0.1",
     "react-stepper-horizontal": "^1.0.11"
   }

@@ -84,3 +84,13 @@
     text-shadow: 0px 1px 10px rgba(0, 0, 0, 1),0px 0px 18px rgba(0, 0, 0, 1);
     margin-bottom: 10px;
 }
+
+@media (min-width: 410px) and (max-width: 420px)  {
+    .program {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "three three"
+        "one four"
+        "two five";
+    }
+}

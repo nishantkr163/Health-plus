@@ -60,3 +60,56 @@
     padding: 5px;
     border-radius: 50%;
 }
+.hamb {
+    display: none;
+}
+
+
+@media (min-width: 410px) and (max-width: 420px) {
+    .navbar {
+      /* flex-direction: column; */
+      padding: 0;
+    }
+
+    .contacts{
+        display: none;
+    }
+  
+    .navbarLink {
+      flex-direction: column;
+      align-items: center;
+      padding: 5px 0;
+      width: 100%;
+    }
+  
+    .normal {
+        display: none;
+    }
+    .hamb {
+        display: contents;
+    }
+  }
+
+  .hamburger {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 30%;
+    background-color: black;
+    left: 72%;
+    animation: hamburger 2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 4;
+  }
+
+  @keyframes hamburger {
+    0% {
+        left: 90%;
+    }
+    100% {
+        left: 72%;
+    }
+  }

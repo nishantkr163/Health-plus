@@ -5,7 +5,8 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 
 const Schedules = () => {
   return (
-    <><Typography
+    <div className={style.classs}>
+    <Typography
     fontWeight="bold"
     className={style.class}
     fontFamily="Oswald"
@@ -73,7 +74,7 @@ const Schedules = () => {
       <div className={style.activites}></div>
     </div>
   </div>
-  </>
+  </div>
   )
 }
 
