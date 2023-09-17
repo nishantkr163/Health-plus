@@ -38,7 +38,7 @@ Health+ is a web application designed to promote health and fitness. It provides
 ![LoginPage](https://i.ibb.co/nChCLQp/loginpage.png)
 
 ## Deployment
-https://vercel.com/deployments/healthplus-a3vv5ntwv-manishsingh64.vercel.app
+[Vercel Link](https://health-khht942ac-manirhombuz.vercel.app/)
 
 ## Installation
 1. Clone the repository: `git clone [https://github.com/username/my-awesome-project.git](https://github.com/maniRhombuz/humdrum-town-8956.git)`
