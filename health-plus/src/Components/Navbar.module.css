@@ -65,7 +65,7 @@
 }
 
 
-@media (min-width: 410px) and (max-width: 420px) {
+@media (min-width: 300px) and (max-width: 800px) {
     .navbar {
       /* flex-direction: column; */
       padding: 0;
@@ -94,9 +94,10 @@
     position: fixed;
     top: 0;
     height: 100vh;
-    width: 30%;
+    /* width: 30%; */
+    padding: 0 20px;
     background-color: black;
-    left: 72%;
+    right: 0%;
     animation: hamburger 2s;
     display: flex;
     flex-direction: column;
@@ -107,9 +108,9 @@
 
   @keyframes hamburger {
     0% {
-        left: 90%;
+        right: -20%;
     }
     100% {
-        left: 72%;
+        right: 0%;
     }
   }

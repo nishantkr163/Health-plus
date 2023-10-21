@@ -13,7 +13,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 800px;
+    height: 100vh;
 }
 
 .AboutHeroSection {
@@ -55,12 +55,42 @@
 .heroSectionTitle {
     color: white;
     width: 39%;
-
+    font-size: 270%;
 }
 
 .subTitle {
     color: white;
     width: 30%;
+    font-size: 170%;
+}
+
+@media screen and (max-width : 1000px ) and (min-width : 700px) {
+  .subTitle {
+    width: 50%;
+  }
+  .heroSectionTitle {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width : 699px ) and (min-width : 537px) {
+  .subTitle {
+    width: 60%;
+  }
+  .heroSectionTitle {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width : 536px ) and (min-width : 300px) {
+  .subTitle {
+    width: 70%;
+    font-size: 120%;
+  }
+  .heroSectionTitle {
+    width: 90%;
+    font-size: 200%;
+  }
 }
 
 .heroSectionTexts {
@@ -258,6 +288,18 @@
   padding: 40px 0;
 }
 
+@media screen and (max-width: 1049px) and (min-width : 800px) {
+    .productCardCont {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 799px) and (min-width : 300px) {
+  .productCardCont {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 
 .card {
   --font-color: #323232;
@@ -414,8 +456,8 @@
 
 /* Input container ends here */
 
-@media (min-width: 410px) and (max-width: 420px)  {
+/* @media (min-width: 410px) and (max-width: 420px)  {
     .heroSectionTitle, .subTitle {
       display: none;
     }
-}
+} */

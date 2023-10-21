@@ -107,9 +107,11 @@ const FaqAndTestimonial = () => {
   const slideNumberStyle = {};
 
   return (
-    <div className={style.mainFaqDiv}>
+    <div className="container-fluid">
+      <div className="row d-flex justify-content-center" >
+
       <div
-        className={style.faqSec}
+        className="col-md-6"
       >
         <Typography mb="20px"
           textAlign="center"
@@ -146,7 +148,7 @@ const FaqAndTestimonial = () => {
         />
       </div>
 
-      <div className={style.accordion}>
+      <div className="col-md-6">
         <Typography
           mb="20px"
           textAlign="center"
@@ -269,6 +271,8 @@ const FaqAndTestimonial = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
+      </div>
+
       </div>
     </div>
   );

@@ -11,16 +11,21 @@
 
 .mainProd > div {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2.5px, rgb(51, 51, 51) 0px 0px 0px 3px;
-    width: 45%;
     border-radius: 5px;
-    height: 650px;
+    /* height: 650px; */
     padding: 40px;
 }
 
-.mainProd {
+.imageDiv {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+}
+
+.mainProd {
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center; */
     padding: 0 40px;
     position : relative;
     top : -100px;
@@ -28,6 +33,37 @@
 
 .mainProd img {
     width: 100%;
+}
+@media screen and (max-width : 1149px) and (min-width : 300px) {
+    .mainProd {
+        flex-direction: column;
+    }
+
+    .imageDiv img {
+        width: 70%;
+    }
+
+    .mainProd > div  {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width : 1149px) and (min-width : 818px) {
+    .mainProd img {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width : 817px) and (min-width : 700px) {
+    .mainProd img {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width : 699px) and (min-width : 300px) {
+    .mainProd img {
+        width: 100%;
+    }
 }
 
 button {

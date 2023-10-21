@@ -1,59 +1,68 @@
 .mainDiv {
-    /* border: 1px solid red; */
-    padding: 10px;
-    height: 500px;
-    position: relative;
-    width: 70%;
-    /* margin: auto; */
-    top: 33%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    backdrop-filter: blur(10px);
-    color: white;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    animation: open 0.8s;
+  /* border: 1px solid red; */
+  padding: 10px;
+  height: 500px;
+  position: relative;
+  width: 100%;
+  /* margin: auto; */
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(10px);
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  animation: open 0.8s;
 }
 
 @keyframes open {
-    0% {
-      opacity: 0;
-      height: 0px;
-    }
-    100% {
-      opacity: 1;
-      height: 500px;
-    }
+  0% {
+    opacity: 0;
+    height: 0px;
   }
-
-
+  100% {
+    opacity: 1;
+    height: 500px;
+  }
+}
 
 .mainDiv > div {
-    /* border: 1px solid green; */
-    height: 95%;
+  /* border: 1px solid green; */
+  height: 95%;
 }
 
 .loginDivOne {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
 }
 
 .loginDivtwo {
-    display: flex;
-    width: 55%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
 }
 
 .logoShow {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 713px) and (min-width: 300px) {
+  .mainDiv {
+    flex-direction: column;
+  }
+  .loginDivOne, .loginDivtwo {
+    width: 100%;
+  }
 }

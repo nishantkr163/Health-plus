@@ -85,12 +85,63 @@
     margin-bottom: 10px;
 }
 
-@media (min-width: 410px) and (max-width: 420px)  {
+@media (min-width: 494px) and (max-width: 793px)  {
     .program {
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
         "three three"
-        "one four"
+        "one one"
+        "one one"
+        "four four"
+        "four four"
         "two five";
     }
+
+    .oneP, .threeP, .twoP, .fiveP, .fourP {
+        border-radius: 0;
+    }
+
+    .threeP {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .twoP {
+        border-bottom-left-radius: 20px;
+    }
+
+    .fiveP {
+        border-bottom-right-radius: 20px;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 493px)  {
+    .program {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "three three"
+        "one one"
+        "one one"
+        "four four"
+        "four four"
+        "two five";
+    }
+
+    .oneP, .threeP, .twoP, .fiveP, .fourP {
+        border-radius: 0;
+    }
+
+    .threeP {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .twoP {
+        border-bottom-left-radius: 20px;
+    }
+
+    .fiveP {
+        border-bottom-right-radius: 20px;
+    }
+
 }

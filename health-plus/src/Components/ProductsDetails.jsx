@@ -80,11 +80,13 @@ const ProductsDetails = () => {
   return (
     <>
       <div className={style.mainDiv}></div>
-      <div className={style.mainProd}>
-        <div>
-          <img src={data.image} alt={data.title} />
+      <div className="container-fluid" >
+      <div className={`${style.mainProd} row`}>
+        <div className={`${style.imageDiv} col-lg-6`} >
+          <img className={style.prodImage} src={data.image} alt={data.title} />
         </div>
         <div
+        className="col-lg-6"
           style={{
             display: "flex",
             flexDirection: "column",
@@ -168,6 +170,7 @@ const ProductsDetails = () => {
             </Typography>
           </div>
         </div>
+      </div>  
       </div>
       <div className={style.prodReviewDiv}>
         <div className={style.prodReview}>
@@ -264,7 +267,6 @@ const ProductsDetails = () => {
           <textarea
             placeholder="About the product..."
             rows="4"
-            cols="66"
             onChange={(e) => {
               setRev(e.target.value);
             }}
@@ -272,6 +274,7 @@ const ProductsDetails = () => {
               border: "2.5px solid black",
               marginBottom: "10px",
               padding: "10px",
+              width: "80%"
             }}
           ></textarea>
           <br />

@@ -73,6 +73,7 @@ export const Home = () => {
       >
         MEET OUR PROFESSIONAL COACHES
       </Typography>
+      <br />
       <Coaches />
       <br />
       <br />

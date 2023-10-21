@@ -1,5 +1,5 @@
 .mainDiv {
-    height: 90vh;
+    /* height: 90vh;
     width: 90%;
     background-color: bisque;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
@@ -9,12 +9,20 @@
     top :  50%;
     left : 50%;
     transform: translate(-50%, -50%) scale(1);
-    animation : cartshow 0.6s ;
+    animation : cartshow 0.3s ;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-y: scroll;
-}
+    overflow-y: scroll; */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),  url("https://plus.unsplash.com/premium_photo-1670505062582-fdaa83c23c9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 22vh;
+    position: relative;
+    top: -130px;
+    z-index: -1;
+} 
 
 @keyframes cartshow {
     0% {
@@ -40,11 +48,11 @@
 
 .mainCart {
     /* border: 1px solid black; */
-    height: 90%;
+    /* height: 90%;
     width: 85%;
     display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 40px;
+    grid-template-columns: 3fr;
+    gap: 40px; */
 }
 
 .mainCart > div {
@@ -57,9 +65,17 @@
 
 .dataCart {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
+    /* display: flex;
+    flex-wrap: wrap; */
     /* gap: 20px; */
+}
+
+@media screen and (max-width: 1014px) and (min-width: 300px) {
+    .dataCart {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .dataCart > div {

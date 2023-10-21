@@ -7,6 +7,7 @@ import axios from "axios";
 import { LabelContext } from "../labelDataContext";
 import { useNavigate } from "react-router-dom";
 import Loading from "./Loading";
+import { styled } from "styled-components";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -64,25 +65,7 @@ const Login = () => {
   }
 
   return (
-    <div className={style.mainDiv}>
-      <div className={style.loginDivOne}>
-        <Typography
-          fontWeight="bold"
-          fontFamily="Oswald"
-          color="white"
-          variant="h4"
-          m="6"
-          textAlign="center"
-          sx={{ padding: "30px 30px" }}
-        >
-          Take your experience to the next level Get our app!
-        </Typography>
-
-        <div className={style.logoShow}>
-          <img width={"50%"} src={logo} alt="Website of logo" />
-          <img width={"50%"} src={applogo} alt="App download" />
-        </div>
-      </div>
+    <DIV className={style.mainDiv}>
       <div className={style.loginDivtwo}>
         {loading ? (
           <Loading />
@@ -220,8 +203,30 @@ const Login = () => {
           </form>
         )}
       </div>
-    </div>
+      <div className={style.loginDivOne}>
+        <Typography
+          fontWeight="bold"
+          fontFamily="Oswald"
+          color="white"
+          variant="h4"
+          m="6"
+          textAlign="center"
+          sx={{ padding: "30px 30px" }}
+        >
+          Take your experience to the next level Get our app!
+        </Typography>
+
+        <div className={style.logoShow}>
+          <img width={"30%"} src={logo} alt="Website of logo" />
+          <img width={"30%"} src={applogo} alt="App download" />
+        </div>
+      </div>
+    </DIV>
   );
 };
 
 export default Login;
+
+const DIV = styled.div`
+  
+`

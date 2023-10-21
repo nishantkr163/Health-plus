@@ -14,6 +14,8 @@ import {
 import ProductsDetails from "../Components/ProductsDetails";
 import { LabelContext } from "../labelDataContext";
 import { Navigate, useNavigate } from "react-router-dom";
+import { styled } from "styled-components";
+import Footer from "../Components/Footer";
 
 export const Products = () => {
   const [loading, setLoading] = useState(false);
@@ -258,6 +260,8 @@ export const Products = () => {
         </div>
       )}
     </div>
+    <Footer />
     </>
   );
 };
+

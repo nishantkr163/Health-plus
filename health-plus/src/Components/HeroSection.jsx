@@ -6,8 +6,8 @@ import { Typography } from '@mui/material'
 const HeroSection = () => {
   return (
     <div className='heroSectionTexts'>
-        <Typography fontFamily='Oswald' fontWeight='bold' className='heroSectionTitle' variant='h3'>ELEVATE YOUR WELLNESS JOURNEY. START YOUR PATH TO FITNESS.</Typography>
-        <Typography fontFamily='Oswald' fontWeight='bold' className='subTitle' variant='h4'>Join Our Fitness Community and Start Your Transformation Today!</Typography>
+        <h1 fontFamily='Oswald' fontWeight='bold' className='heroSectionTitle' variant='h3'>ELEVATE YOUR WELLNESS JOURNEY. START YOUR PATH TO FITNESS.</h1>
+        <h2 fontFamily='Oswald' fontWeight='bold' className='subTitle' variant='h4'>Join Our Fitness Community and Start Your Transformation Today!</h2>
     </div>
   )
 }

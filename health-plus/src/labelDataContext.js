@@ -3,14 +3,14 @@ import React, { useState, createContext } from "react";
 export const LabelContext = createContext();
 
 const initData = {
-  name: "testUser1",
-  email: "test1@gmail.com",
-  password: "1234",
+  name: "",
+  email: "",
+  password: "",
   gender: "",
-  age: "22",
+  age: "",
   dateOfBirth: "",
-  height: "168",
-  weight: "66",
+  height: "165",
+  weight: "50",
   fitness: []
 }
 
@@ -33,31 +33,6 @@ export const LabelProvider = (props) => {
     const updatedCart = [...tcart, ele];
     setTCart(updatedCart);
   }
-
-//   <div
-//   style={{
-//     display: "flex",
-//     justifyContent: "space-around",
-//     alignItems: "center",
-//   }}
-// >
-//   <Typography fontWeight="bold" fontFamily="Oswald" variant="h5">
-//     No. of Items:
-//   </Typography>
-//   <button
-//     style={{ width: "20%", color: "#DB2A24", fontWeight: "bold" }}
-//     onClick={() => setCount(count - 1)}
-//   >
-//     <RemoveIcon />
-//   </button>{" "}
-//   <p>{count}</p>{" "}
-//   <button
-//     style={{ width: "20%", color: "green", fontWeight: "bold" }}
-//     onClick={() => setCount(count + 1)}
-//   >
-//     <AddIcon />
-//   </button>
-// </div>
 
   const handleProf = () => {
     setProf(!prof)

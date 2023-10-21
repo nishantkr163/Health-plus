@@ -88,6 +88,7 @@ const Navbar = () => {
             {value.logged ? (
               <>
                 <p
+                  className="mt-3"
                   style={{
                     color: "white",
                     backgroundColor: "transparent",
@@ -99,18 +100,20 @@ const Navbar = () => {
                 >
                   MY PROFILE
                 </p>
-                <p
-                  onClick={() => {
-                    value.handleCart();
-                  }}
+                <Link  to="/cart"
+                  
+                  // onClick={() => {
+                  //   value.handleCart();
+                  // }}
                   style={{
                     color: "white",
                     backgroundColor: "transparent",
                     cursor: "pointer",
+                    textDecoration : "none"
                   }}
                 >
                   CART
-                </p>
+                </Link>
               </>
             ) : (
               <Link className={styles.routes} to="/signup">
@@ -154,10 +157,10 @@ const Navbar = () => {
               >
                 MY PROFILE
               </p>
-              <p
-                onClick={() => {
-                  value.handleCart();
-                }}
+              <Link to="/cart"
+                // onClick={() => {
+                //   value.handleCart();
+                // }}
                 style={{
                   color: "white",
                   backgroundColor: "transparent",
@@ -165,7 +168,7 @@ const Navbar = () => {
                 }}
               >
                 CART
-              </p>
+              </Link>
             </>
           ) : (
             <Link className={styles.routes} to="/signup">
